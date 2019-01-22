@@ -1,0 +1,161 @@
+%=============================================================================
+%   Report main file
+%   Reporte de pentominos
+%   Servicio social - Laura Natalia Borbolla Palacios
+%=============================================================================
+
+
+\documentclass[12pt, letterpaper, oneside]{article}
+
+%Bibliotecas *******************************************************************
+\usepackage[utf8]{inputenc}                         %Codificación de documento
+\usepackage[sfdefault]{ClearSans}                   %Fuente
+\usepackage{graphicx}                               %Manejo de imágenes
+\usepackage{float}                                  %Opciones de portada
+\usepackage{fancyhdr}                               %Encabezado y pie de página
+\usepackage{xcolor}                                 %Gestión de colores
+\usepackage[]{hyperref}                             %Opciones de pdf producto
+\usepackage{titlesec}								                %Títulos y subtítulos
+\usepackage{amsfonts}                               %Símbolos matemáticos
+\usepackage{amsmath}                                %Notación matrices
+\usepackage{import}
+\usepackage{multicol}
+% \usepackage{minted}
+\usepackage{subcaption}
+\usepackage{appendix}
+
+%Bibliografía
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+
+%Márgenes
+\usepackage[letterpaper, headheight=1.0in, textwidth=6.5in, inner=1.0in, outer=1.0in, bottom=1.0in]{geometry}
+
+%Variables *********************************************************************
+
+\newcommand{\Laboratory}{Artificial Life Robotics Laboratory}
+\newcommand{\Acronym}{(ALIROB)}
+\newcommand{\Title}{3D Cellular Automata And Pentominos}
+\newcommand{\Subtitle}{Simulations and configurations}
+\newcommand{\Autor}{Laura Natalia Borbolla Palacios}
+\newcommand{\Date}{Winter 2018}
+
+%Configuracion *****************************************************************
+
+%Formato de párrafos
+\setlength{\parindent}{2em}                           %Sangría
+\setlength{\parskip}{1em}                             %Espacio entre párrafos
+\renewcommand{\baselinestretch}{1.5}                  %Interlineado
+% \renewcommand{\appendixname}{Apéndices}
+% \renewcommand{\appendixtocname}{Apéndices}
+% \renewcommand{\appendixpagename}{Apéndices}
+
+%Encabezado y Pie
+\pagestyle{fancy}
+\fancyhf{}
+\chead{\Title{}}                                     %Centro arriba
+\rfoot{Página \thepage}                                 %Derecha abajo
+\lfoot{\Laboratory{}}                                    %Izquierda abajo
+\renewcommand{\headrulewidth}{1pt}                    %Linea
+\renewcommand{\footrulewidth}{1pt}
+
+%Bibliografía
+\addbibresource{fuentes.bib}
+
+%Títulos
+\titlespacing{\section}{0pc}{0pc}{0pc}
+\titlespacing{\subsection}{0pc}{0pc}{0pc}
+
+%Configuración de pdf
+\hypersetup{
+    pdftitle={\Title{}},
+    pdfauthor={\Autor{}},
+    pdfsubject={\Subtitle{}},
+    bookmarksnumbered=false,
+    bookmarksopen=true,
+    bookmarksopenlevel=3,
+    pdfstartview=Fit,
+    pdfpagemode=UseOutlines,
+    pdfpagelayout=TwoPageRight,
+    colorlinks,
+    linkcolor={black!255!black},
+    citecolor={black!50!black},
+    urlcolor={black!80!black}
+}
+
+%Información
+\title{\Title{}}
+\author{\Autor{}}
+\date{\today}
+
+%Documento *********************************************************************
+
+\begin{document}
+
+	%Portada
+	\begin{titlepage}
+		\begin{center}
+			\begin{large}
+				Instituto Politécnico Nacional\\
+				\vspace*{0.2in}
+				Escuela Superior de Cómputo\\
+				\vspace*{0.6in}
+			\end{large}
+			\begin{large}
+				\Laboratory{}\\
+				\Acronym{}\\
+				\vspace*{0.8in}
+			\end{large}
+			\rule{160mm}{0.1mm}\\
+			\vspace*{0.1in}
+			\begin{Large}
+				\textbf{\Title{}} \\
+				\vspace*{0.1in}
+				\Subtitle{} \\
+			\end{Large}
+			\vspace*{0.1in}
+			\rule{160mm}{0.1mm}\\
+			\begin{large}
+				\vspace*{0.8in}
+				\Autor{} \\
+			\end{large}
+			\begin{large}
+				\vspace*{0.8in}
+				\Date{}\\
+			\end{large}
+		\end{center}
+	\end{titlepage}
+
+	\tableofcontents
+	\newpage
+
+  % Report structure:
+  % Brief Summary
+  %   Pentominos
+  %   Cellular Automata
+  %   Well Known Configurations
+  %     Still life
+  %     Oscillators
+  %     Gliders
+  %     Glider Guns
+  % Experiment Results
+  %   The Settings
+  %   Pentomino By Pentomino
+  %   Configurations Found
+  % Conclusions
+  % Appendix
+  %   Full pentomino evolutions
+
+  \import{brief_summary/}{brief_summary}
+  \import{experiment_results/}{experiment_results}
+  \import{conclusion/}{conclusion}
+
+  \appendix
+  \clearpage
+  \addappheadtotoc
+  \appendixpage
+  \import{appendix/}{appendix}
+
+  \newpage
+	\printbibliography[heading=bibintoc]
+
+\end{document}
