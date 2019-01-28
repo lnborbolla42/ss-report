@@ -28,7 +28,13 @@
 \usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
 
 %Márgenes
-\usepackage[letterpaper, headheight=1.0in, textwidth=6.5in, inner=1.0in, outer=1.0in, bottom=1.0in]{geometry}
+\usepackage[
+  letterpaper,
+  headheight=1.0in,
+  textwidth=6.5in,
+  inner=1.0in,
+  outer=1.0in,
+  bottom=1.0in]{geometry}
 
 %Variables *********************************************************************
 
@@ -148,14 +154,14 @@
   \import{brief_summary/}{brief_summary}
   \import{experiment_results/}{experiment_results}
   \import{conclusion/}{conclusion}
+  
+  \newpage
+  \printbibliography[heading=bibintoc]
 
   \appendix
   \clearpage
   \addappheadtotoc
   \appendixpage
   \import{appendix/}{appendix}
-
-  \newpage
-	\printbibliography[heading=bibintoc]
 
 \end{document}
