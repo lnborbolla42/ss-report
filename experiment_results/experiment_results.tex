@@ -9,10 +9,33 @@
 %   Pentomino By Pentomino
 %   Configurations Found
 
+\newpage
 \section{Experiment Results}
+
+The experiment consisted in evolving in a three dimensional universe, with cubes
+as units and an adaptation of the diffusion rule, each Conway pentomino and
+observing it's behaviour while watching out for configurations such as still
+lifes, oscillators gliders and specially, glider guns.
+
 \subsection{The Settings}
-Talk about the settings for the simulation, the simulator used and the
-constrains (equipment, time, etcetera).
+The simulations were done in Ready, a cross-platform implementation of various
+reaction-difussion systems designed to explore both, continuous and discrete
+cellular automata on grids and arbitrary meshes \cite{ready-golly-gang}.
+Alas, precisely because it can be used with continuous and discrete universes,
+Ready is not optimized for experiments of this kind, provoquing quite slow
+evolutions.
+
+Each experiment started with a pentomino in the center of a $256\times256$ empty
+cube; the simulation ended when there were no more alive cells or when the cells
+filled the space and started to interfere one another. Since Ready does not
+permit to move the view when the simulation is running, each pentomino scenario
+was run, at least, three times in order to obtain a front, lateral and in angle
+view of the evolution. The complete evolutions can be observed
+in~\ref{appendix:main-app}.
+
+% ‘HQ’ refers to high performance integrated graphics and a quad core CPU
+% Talk about the settings for the simulation, the simulator used and the
+% constrains (equipment, time, etcetera).
 
 \import{/}{pentomino_by_pentomino}
 \import{/}{configurations_found}
