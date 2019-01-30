@@ -4,5 +4,63 @@
 %   Servicio social - Laura Natalia Borbolla Palacios
 %=============================================================================
 
-\subsection{Cellular Automata}
-Hey, there! We are talking about cellular automata. Basic structures and some well acquainted rules.
+\subsection{Cellular Automaton}
+
+For more information, please consult \cite{cellular-automata-sep,
+cellular-automata-kari, cellular-automata-math, j1, j2, j3}.
+
+A cellular automaton is a discrete dynamical system that consists of a set of
+simple units (cells) that change their states at each time step, depending of
+the states of their neighbors (there are no actions at a distance), according to
+a local update rule; the cells evolve in parallel at discrete time steps and
+they all use the same update rule.
+
+They are also known as \textbf{CA} and have proof been quite useful, both as
+general models of complexity and as specific representations of non-linear
+dynamics in a great variety of fields. Despite functioning in a
+non-traditionally way, the \textbf{CA} can solve algorithmic problems or
+compute functions, all of this with the right suitable rule, of course.
+
+Cellular automata come in a variety of shapes; the type of grid (for example,
+square,  triangular or hexagonal cells in a two-dimensional \textbf{CA}) is one
+of it's most fundamental properties. The neighborhood over which cells affect
+one another is also very important; two common neighborhoods in the case of a
+two-dimensional \textbf{CA} on a square grid are the Moore and the von Newmann
+neighborhoods.
+
+The \textbf{elementary cellular automata} are the simplest type of cellular
+automaton, being a binary, nearest-neighbor, one-dimensional automaton; these
+\textbf{CA} have been thoroughly studied. There are 256 \textbf{ECA}.
+
+The best known cellular automaton is the \textit{Game of life}, discovered by
+J. H. Conway in 1970; this is a binary automaton with a Moore neighborhood. Over
+the years, it has been compiled a library of patterns with various behaviours:
+
+\begin{itemize}
+  \item \textbf{Still life}. A fixed point pattern; the update rule keeps each
+    cell unchanged.
+  \item \textbf{Oscillator}. A temporally periodic pattern; the update rule may
+    change the pattern, but after some steps, the original pattern reapears in
+    the same location with the same orientation.
+  \item \textbf{Spaceship}. A pattern that reappears, after some steps, although
+    not necessarily in the same location.
+  \item \textbf{Gun}. A pattern that, as an oscillator, periodically returns
+    back to the initial state and emits spaceships.
+  \item \textbf{Glider gun}. A pattern that emmits gliders.
+\end{itemize}
+
+\subsubsection{The Diffusion Rule}
+Conway's \textit{Game of Life} inspired the cientific community and soon they
+started to experiment with variations of the game's rules to find new and
+interesing behaviours, for example, \textit{high life}, \textit{life 43} and
+\textit{long life}; later they started experimenting with new neighborhoods,
+different shapes in the grids and the numer of dimensions in the universe. One
+rule stands out of the rest: the diffusion rule; mainly because it's behaviour
+is chaotic and with it, there has been discovered a great deal of gliders,
+oscillators, glider guns and puffer trains. The rule is defined as follow:
+\begin{itemize}
+  \item Any living cell with less than seven neighbours dies out of loneliness.
+  \item Any living cell with more than seven neighbours dies suffocated.
+  \item Any living cell with seven neighbours lives onto the next generation.
+  \item Any death cell with two living neighbours will be born in the next generation.
+\end{itemize}

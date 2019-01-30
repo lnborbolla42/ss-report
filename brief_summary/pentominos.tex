@@ -7,7 +7,8 @@
 \subsection{Pentominos}
 % Hey, there! We are talking about pentominos. Basic structures and how
 % Conway used them to find basic configurations in the elemental automata.
-For more information, please consult \cite{language-and-automata-journal, life-wiki, rit-people}.
+For more information, please consult \cite{language-and-automata-journal,
+polyomino-life-wiki, rit-people, rpentomino-life-wiki, methuselah-life-wiki}.
 
 A polyomino is a finite collection of orthogonally connected cells; or, in
 another workds, a collection of equally-sized squares that form a connected
@@ -27,12 +28,31 @@ topics related to cellular automata.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.35]{diagrams/conway_pentominoes.PNG}
+	\includegraphics[scale=0.25]{diagrams/conway_pentominoes.PNG}
 	\caption{Conway pentominoes from O through Z (left to right).}
   \label{fig:conway_pentominoes}
 \end{figure}
 
-%% http://www.conwaylife.com/wiki/Polyomino
-%% https://books.google.com.mx/books?id=dBW6BQAAQBAJ&pg=PA16&dq=pentominos+conway&hl=es-419&sa=X&ved=0ahUKEwjl2O3qi4DgAhXnmq0KHZH3DvsQ6AEILzAB#v=onepage&q=pentominos%20conway&f=true
+Conway used polyominoes, specially pentominoes, in his initial investigations of
+Life and other cellular automata: he tracked the histories of small polyominoes
+as a way to explore the behaviour of different cellular automata when the
+calculations had to be done by hand; the studies of the polyominoes led to
+important discoveries in Life.
 
 \subsubsection{R-Pentomino}
+Among the other pentominoes, the \textbf{R-pentomino} outstands; mainly because
+of two reasons:
+	\begin{itemize}
+		\item It is a methuselah\footnotemark, meaning is a pattern that takes a
+			large number of generations to stabilize and, at some point during it's
+			evolution, becomes much larger than it's initial configuration.
+		\item The first glider ever observed is the glider that releases in the
+		 	69th generation.
+	\end{itemize}
+Since all the others pentominoes stabilize in ten generations or less, this is,
+by far, the most active pentomino: it takes 1103 generations and by then it's
+population is of 116.
+
+\footnotetext{
+	M. Gardner defined methuselahs as patterns of less than ten cells that take
+	more than fifty generations to stabilize\cite{ wheels-gardner}.}
