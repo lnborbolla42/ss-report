@@ -40,13 +40,16 @@ all the cells are dead.
 
 This pentomino (see figure~\ref{fig:iso-pent-p}) is quite interesting; three
 configurations can bee seen whithin less than 47 generations. The first one to
-appear is a puffer train (see figure~\ref{fig:iso-puffer-1}), latter, the first
+appear is a replicator (see figure~\ref{fig:iso-puffer-1}), latter, the first
 (and one of the simplest) glider appears (see figure~\ref{fig:iso-glider-1});
 finally, another glider appears (see figure~\ref{fig:iso-glider-2}).
 
 Figure~\ref{fig:ss-pent:p-42} shows the state of the evolution of the
-p-pentomino in the $42^{th}$ generation; the puffer can be seen in the north
-of the evolution; while the gliders are located in the south of the population.
+p-pentomino in the $42^{th}$ generation; the replicator can be seen in the north
+of the evolution; while the gliders are located in the south of the population;
+in~\ref{fig:ss-pent:p-42-puffer} the replicator can be seen in the left of the
+figure and in~\ref{fig:ss-pent:p-42-glider}, the gliders can be seen in the
+south.
 
 The simulation of this pentomino stopped at 210 generations because the space
 was overcrowded.
@@ -69,16 +72,16 @@ was overcrowded.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.3]{pentominoes_ss/p_42_puffer.png}
-	\caption{Evolution of the P-Pentomino, zoomed puffer train, $42^{th}$
+	\caption{Evolution of the P-Pentomino, zoomed replicator, $42^{th}$
 	generation.}
-  \label{fig:ss-pent:p-42}
+  \label{fig:ss-pent:p-42-puffer}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.3]{pentominoes_ss/p_42_gliders.png}
 	\caption{Evolution of the P-Pentomino, zoomed gliders, $42^{th}$ generation.}
-  \label{fig:ss-pent:p-42}
+  \label{fig:ss-pent:p-42-glider}
 \end{figure}
 
 
@@ -86,7 +89,7 @@ was overcrowded.
 \subsubsection{Q-Pentomino}
 \label{sec:q-pentomino}
 This pentomino (see figure~\ref{fig:iso-pent-q}) shows in ten generations, two
-structures, one is a puffer train (see figure~\ref{fig:iso-puffer-1}), and a
+structures, one is the replicator-1 (see figure~\ref{fig:iso-puffer-1}), and a
 \textit{modified} glider: the glider-1 (see figure~\ref{fig:iso-glider-1}) with
 a satellite (see figure~\ref{fig:iso-glider-3}). The evolution of the $10^{th}$
 generation with both structures can be seen in figure~\ref{fig:ss-pent:q-10}.
@@ -143,7 +146,7 @@ two dimensions, expands very quickly in a short period of time, this can be seen
 in the figure~\ref{fig:ss-pent:r-comparative}, where a comparative between the
 evolution achieved in the same generation for different pentominos.
 
-The puffer train (see figure~\ref{fig:iso-puffer-1}) appears here, too; as the
+The replicator (see figure~\ref{fig:iso-puffer-1}) appears here, too; as the
 glider-1 (see figure~\ref{fig:iso-glider-1}) and glider-4 (see
 figure~\ref{fig:iso-glider-4}); the gliders can be seen in the  $81^{th}$
 generation, in the north-east, nort-west, south-east and south-west areas of the
@@ -169,32 +172,37 @@ shown in the upper-left of figure~\ref{fig:ss-pent:r-81-glider4}.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.3]{pentominoes_ss/r_81.png}
-	\caption{Evolution of the Q-Pentomino, $81^{th}$ generation.}
+	\caption{Evolution of the R-Pentomino, $81^{th}$ generation.}
   \label{fig:ss-pent:r-81}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.3]{pentominoes_ss/r_81_glider1.png}
-	\caption{Evolution of the Q-Pentomino, zoomed glider-1, $81^{th}$ generation.}
+	\caption{Evolution of the R-Pentomino, zoomed glider-1, $81^{th}$ generation.}
   \label{fig:ss-pent:r-81-glider1}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.3]{pentominoes_ss/r_81_glider4.png}
-	\caption{Evolution of the Q-Pentomino, zoomed glider-4, $81^{th}$ generation.}
+	\caption{Evolution of the R-Pentomino, zoomed glider-4, $81^{th}$ generation.}
   \label{fig:ss-pent:r-81-glider4}
 \end{figure}
 
 % S PENTOMINO ==================================================================
 \subsubsection{S-Pentomino}
 \label{sec:s-pentomino}
-This pentomino (see figure~\ref{fig:iso-pent-s}) shows, quite fast, two puffer
-trains; first, the small one seen in previous pentominoes; later, however, a
-brand new clean puffer train (see figure~\ref{fig:iso-puffer-2}) emerges; four
-of these puffers can be seen in the figure~\ref{fig:ss-pent:s-56}
-
+This pentomino (see figure~\ref{fig:iso-pent-s}) shows, quite fast, the
+replicator-1, seen in previous pentominoes first; later a clean puffer
+(see figure~\ref{fig:iso-puffer-2}) emerges; four of these puffers can be seen
+in the figure~\ref{fig:ss-pent:s-56}. This was one of the most active
+pentominoes; and, although the simulation had to be stopped after 131
+generations. Interestingly, the growth in te population seemed more ordered,
+symetrical and configuration driven: seems easier to find individual
+configurations in the s-pentomino than in the others. Two pairs of puffer-2
+can be seen again, a pair moving towards east, a pair, towards west; in figures
+\ref{fig:ss-pent:s-57}~and~\ref{fig:ss-pent:s-57}.
 
 \begin{figure}
 	\centering
@@ -210,11 +218,26 @@ of these puffers can be seen in the figure~\ref{fig:ss-pent:s-56}
   \label{fig:ss-pent:s-56}
 \end{figure}
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.3]{pentominoes_ss/s_57.png}
+	\caption{Evolution of the S-Pentomino, $57^{th}$ generation.}
+  \label{fig:ss-pent:s-57}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.3]{pentominoes_ss/s_60.png}
+	\caption{Evolution of the S-Pentomino, $60^{th}$ generation.}
+  \label{fig:ss-pent:s-59}
+\end{figure}
+
 % T PENTOMINO ==================================================================
 \subsubsection{T-Pentomino}
 \label{sec:t-pentomino}
-This pentomino (see figure~\ref{fig:iso-pent-t}),
-
+This pentomino (see figure~\ref{fig:iso-pent-t}) behaves reather differently
+than it's equivalents in other rules (and dimensions); instead of evolving in a
+replicator, spaceship, pulsar or such, dies within five generations.
 
 \begin{figure}
 	\centering
@@ -223,10 +246,10 @@ This pentomino (see figure~\ref{fig:iso-pent-t}),
   \label{fig:iso-pent-t}
 \end{figure}
 
+% U PENTOMINO ==================================================================
 \subsubsection{U-Pentomino}
 \label{sec:u-pentomino}
 This pentomino (see figure~\ref{fig:iso-pent-u}),
-
 
 \begin{figure}
 	\centering
